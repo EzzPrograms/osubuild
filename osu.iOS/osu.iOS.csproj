@@ -9,6 +9,13 @@
     <AssemblyName>osu.iOS</AssemblyName>
     <MtouchUseLlvm>false</MtouchUseLlvm> <!-- This currently causes random lockups during gameplay. https://github.com/mono/mono/issues/18973 -->
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <CodesignProvision>1b8375f5021c1d59ea6016f892e0dedacf29ee26</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>moe.ezz.osulazer</IpaPackageName>
+  </PropertyGroup>
   <Import Project="..\osu.iOS.props" />
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -48,6 +55,10 @@
     <ProjectReference Include="..\osu.Game.Rulesets.Taiko\osu.Game.Rulesets.Taiko.csproj">
       <Project>{F167E17A-7DE6-4AF5-B920-A5112296C695}</Project>
       <Name>osu.Game.Rulesets.Taiko</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\sentakki\osu.Game.Rulesets.Sentakki\osu.Game.Rulesets.Sentakki.csproj">
+      <Project>{B8FABBBD-6AA2-4CA1-B0C2-CE249EAB20B1}</Project>
+      <Name>osu.Game.Rulesets.Sentakki</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

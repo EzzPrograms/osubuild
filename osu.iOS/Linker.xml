@@ -24,4 +24,7 @@
     <assembly fullname="osu.Game.Rulesets.Osu">
         <type fullname="*" />
     </assembly>
+    <assembly fullname="osu.Game.Rulesets.Sentakki">
+        <type fullname="*" />
+    </assembly>
 </linker>
